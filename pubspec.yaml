@@ -1,0 +1,16 @@
+name: chat_seguro
+description: "Chat seguro con biometría y perfil"
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  local_auth: ^2.3.0
+  image_picker: ^1.0.7
+
+flutter:
+  uses-material-design: true
