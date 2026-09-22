@@ -1,0 +1,17 @@
+workflows:
+  default-workflow:
+    name: Default Workflow
+    instance_type: mac_mini_m1
+    environment:
+      flutter: stable
+    triggering:
+      events:
+        - push
+    scripts:
+      - name: Instalar dependencias y compilar APK
+        script: |
+          cd biblioteca/biblioteca
+          flutter pub get
+          flutter build apk --release
+    artifacts:
+      - biblioteca/biblioteca/build/app/outputs/flutter-apk/app-release.apk
